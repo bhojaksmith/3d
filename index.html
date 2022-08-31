@@ -2,32 +2,36 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - 3D card </title>
+  <title>3D Tile </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
         <img src="table.png" class="table"> 
-    
+    <div class="select">Select laminate from  below to apply to this table</div>
+    <div class="select mobileMove">You can rub your finger on the laminate to feel it </div>
+    <div class="select reset" onclick="reset();"> Reset </div>
     <div class="container">
-        <div class="cover atvImg">
+        <div class="cover atvImg" onclick="one();">
             <div class="atvImg-layer" data-img="1.png"></div>
             
         </div>
 
-        <div class="cover atvImg">
+        <div class="cover atvImg" onclick="two();">
             <div class="atvImg-layer" data-img="2.png"></div>
             
         </div>
 
-        <div class="cover atvImg">
+        <div class="cover atvImg" onclick="three();">
             <div class="atvImg-layer" data-img="3.png"></div>
             
         </div>
 
-        <div class="cover atvImg">
+        <div class="cover atvImg" onclick="four();">
             <div class="atvImg-layer" data-img="4.png"></div>
             
         </div>
@@ -37,4 +41,21 @@
     
 </body>
 </html>
+<script>
+    function reset(){
+        document.querySelector('.table').setAttribute("src","table.png");
+    }
+    function one(){
+        document.querySelector('.table').setAttribute("src","11.png");
+    }
+    function two(){
+        document.querySelector('.table').setAttribute("src","22.png");
+    }
+    function three(){
+        document.querySelector('.table').setAttribute("src","33.png");
+    }
+    function four(){
+        document.querySelector('.table').setAttribute("src","44.png");
+    }
+</script>
 <script  src="./script.js"></script>
