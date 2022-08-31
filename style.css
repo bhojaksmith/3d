@@ -27,19 +27,27 @@ body {
 	border-radius: 8px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 991px) {
+    .main{
+        width: 100vw;
+    }
+    .table{
+        height: 95vw ;
+        width: 95vw ;
+    }
 	.container {
 		width : 100%;
 		position: relative;
 		transform: translate(0%, 0%);
 		top: 0;
 		left: 0;
+        grid-template-columns: auto auto ;
+        align-items: stretch;
 	}
 	.cover {
 		display: block;
-		height: 200px;
-		width: 320px;
-		margin: 15px auto;
+		height: 420px;
+		width: 460px;
 	}
 }
 
